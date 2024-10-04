@@ -14,12 +14,12 @@ void *functionCount1() {
 
     // Wait while functionCount2() operates on count
     // mutex unlocked if condition varialbe in functionCount2() signaled.
+    pthread_cond_wait(&condition_var, &count_mutex);
     count++;
-    printf("Counter value functionCount1: %d\n",count);
-
-    pthread_mutex_unlock( &count_mutex );
-    if(count >= 10)
-        return(NULL);
+    printf("Counter value functionCount1: %d\n", count);
+    pthread_mutex_unlock(&count_mutex);
+    if (count >= 10)
+        return (NULL);
     }
 }
 
