@@ -104,7 +104,7 @@ int main()
         printf(" %d\t ", time[i]);
     }
 
-    printf("//diperoleh dari penjumlahan Burst");
+    printf("diperoleh dari penjumlahan Burst");
     puts("\n");
     AvWT = (float)TotWT / n;
     AvTA = (float)TotTA / n;
